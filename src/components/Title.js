@@ -14,7 +14,7 @@ useEffect(() => {
     })
     .then((response) => {
       setUser(response.data.user)
-      setTitles(response.data)})
+      setTitles(response.data.titles)})
   }, [token, setUser])
 
  
