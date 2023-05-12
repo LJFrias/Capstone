@@ -14,23 +14,24 @@ useEffect(() => {
     })
     .then((response) => {
       props.setUser(response.data.user)
-      setTitles(response.data.titles)})
+      setTitles(response.data)})
   }, [props.token])
 
   useEffect(() => {
     console.log(titles)
-  }, [titles])
+  })
 
   return (
     <div className='title-container'>
         <CreateTitle token={props.token} user={props.user} setTitles={setTitles} titles={titles}/>
         <ul className="list">
-          
-            {titles.map(({id, booktitle, user_id}) => (
+          {!titles.length ? (
+            <p>Loading Books...</p>
+          ) : (
+            titles.map(({id, booktitle, user_id}) => (
                 <li className="book" key={id}>{booktitle}</li>
             ))
-            }
-           
+          )}  
         </ul>
     </div>
   )

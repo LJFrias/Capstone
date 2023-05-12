@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import {Link, useNavigate} from 'react-router-dom'
+import { useState} from "react";
+import { useNavigate} from 'react-router-dom'
 
 const Signup = (props) => {
     const [name, setName] = useState("")
@@ -22,7 +22,7 @@ const Signup = (props) => {
                         password
                     }
                 ).then((response) => {
-                    console.log(response)
+                   
                 })
 
                 setName("")

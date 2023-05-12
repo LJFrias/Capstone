@@ -8,7 +8,7 @@ const Signin = (props) => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        console.log(email,password)
+        
     }, [email, password])
 
     return(
@@ -23,7 +23,7 @@ const Signin = (props) => {
                         password
                     }
                 ).then((response) => {
-                    console.log(response)
+                    
                     props.setToken(response.data.token)
                 })
 
