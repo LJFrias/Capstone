@@ -9,11 +9,11 @@ const [titles, setTitles] = useState([])
 useEffect(() => {
     axios.get("https://capstone-planning-ljfrias.vercel.app/title", {
         headers: {
-            Authorization: `Bearer ${props.token}`
+            Authorization: `Bearer ${token}`
         }
     })
     .then((response) => {
-      props.setUser(response.data.user)
+      setUser(response.data.user)
       setTitles(response.data)})
   }, [token, setUser])
 
