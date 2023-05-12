@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import {Link, useNavigate} from 'react-router-dom'
 
 const Signin = (props) => {
@@ -7,9 +7,6 @@ const Signin = (props) => {
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
 
-    useEffect(() => {
-        
-    }, [email, password])
 
     return(
         <>
